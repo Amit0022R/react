@@ -2,6 +2,9 @@
 // import Header from "./components/Header";
 // import Main from "./components/Main";
 
+import BasicEffect from "./components/BasicEffect";
+import CounterEffect from "./components/CounterEffect";
+import FetchDataEffect from "./components/FetchDataEffect";
 import Profile from "./components/Profile";
 import ShoppingList from "./components/ShoppingList";
 import TodoList from "./components/TodoList";
@@ -215,18 +218,76 @@ Display the list of shopping items.
 */
 
 
+// const App = () => {
+//   return (
+//     <div>
+//     <ShoppingList />
+//   </div>
+//   )
+// }
+
+// export default App;
+
+
+// ->>>>>>>>>USEEFFECT HOOK<<<<<<<<<<<<<-
+// import { useState, useEffect } from "react";
+/*
+Basic Usage of useEffect
+Create a new file called BasicEffect.jsx.
+Inside this file, create a functional component called BasicEffect.
+Use useEffect to log a message to the console whenever the component mounts (i.e., when it’s rendered the first time).
+*/
+
+// const App = () => {
+//   return (
+//     <div>
+//     <BasicEffect />
+//   </div>
+//   )
+// }
+
+// export default App;
+
+
+/*
+useEffect with Dependencies
+Create a new file called CounterEffect.jsx.
+Inside this file, create a functional component called CounterEffect.
+Use useEffect to update the document title whenever a counter value changes.
+Initialize a count state with 0 using useState.
+Render a button that increments the count.
+Use useEffect to update the document title whenever count changes.
+*/
+
+// const App = () => {
+//   return (
+//     <div>
+//     <CounterEffect />
+//   </div>
+//   )
+// }
+
+// export default App;
+
+
+/*
+useEffect for Fetching Data
+Create a new file called FetchDataEffect.jsx.
+Inside this file, create a functional component called FetchDataEffect.
+Use useEffect to fetch data from an API when the component mounts.
+Use the API endpoint https://jsonplaceholder.typicode.com/posts to fetch some data.
+Store the data in a state variable and display the title of the first post.
+*/
+
 const App = () => {
   return (
     <div>
-    <ShoppingList />
+    <FetchDataEffect />
   </div>
   )
 }
 
 export default App;
-
-
-
 
 
 
