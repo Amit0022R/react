@@ -2,6 +2,9 @@
 // import Header from "./components/Header";
 // import Main from "./components/Main";
 
+import Profile from "./components/Profile";
+import ShoppingList from "./components/ShoppingList";
+import TodoList from "./components/TodoList";
 import UserStatus from "./components/UserStatus";
 import Weather from "./components/Weather";
 
@@ -117,12 +120,126 @@ If timeOfDay is "morning", display: "Good morning!"
 If timeOfDay is "afternoon", display: "Good afternoon!"
 */
 
-import Greeting from "./components/Greeting";
+// import Greeting from "./components/Greeting";
+
+// const App = () => {
+//   return (
+//     <Greeting timeOfDay = "morning" />
+//   )
+// }
+
+// export default App; 
+
+
+
+/*
+Basic Usage of useState
+Create a new file called Counter.jsx.
+Inside this file, create a functional component called Counter.
+Use useState to manage a simple counter state.
+Initialize the state with a value of 0.
+Create a button to increment the counter by 1 when clicked.
+Display the current value of the counter.
+*/
+
+// import Counter from "./components/Counter";
+// const App = () => {
+//   return (
+//     <div>
+//     <Counter />
+//   </div>
+//   )
+// }
+
+// export default App;
+
+
+
+/*
+useState with an Array of Data
+Create a new file called TodoList.jsx.
+Inside this file, create a functional component called TodoList.
+Use useState to manage an array of todo items.
+Initialize the state with an empty array.
+Create a form to add new todo items to the list.
+Display the list of todo items.
+*/
+
+// const App = () => {
+//   return (
+//     <div>
+//     <TodoList />
+//   </div>
+//   )
+// }
+
+// export default App;
+
+
+
+
+/*
+useState with an Object of Data
+Create a new file called Profile.jsx.
+Inside this file, create a functional component called Profile.
+Use useState to manage an object with user profile information.
+Initialize the state with an object containing name and age.
+Provide input fields to update the name and age.
+Display the updated profile information.
+*/
+
+
+// const App = () => {
+//   return (
+//     <div>
+//     <Profile />
+//   </div>
+//   )
+// }
+
+// export default App;
+
+
+
+
+
+
+/*
+useState with an Array of Objects
+Create a new file called ShoppingList.jsx.
+Inside this file, create a functional component called ShoppingList.
+Use useState to manage an array of objects, where each object represents a shopping item with name and quantity.
+Initialize the state with an empty array.
+Create a form to add new items to the list.
+Display the list of shopping items.
+*/
+
 
 const App = () => {
   return (
-    <Greeting timeOfDay = "morning" />
+    <div>
+    <ShoppingList />
+  </div>
   )
 }
 
-export default App; 
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
