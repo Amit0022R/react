@@ -3,6 +3,7 @@
 // import Main from "./components/Main";
 
 import BasicEffect from "./components/BasicEffect";
+import ComponentA from "./components/ComponentA";
 import CounterEffect from "./components/CounterEffect";
 import FetchDataEffect from "./components/FetchDataEffect";
 import Profile from "./components/Profile";
@@ -279,12 +280,28 @@ Use the API endpoint https://jsonplaceholder.typicode.com/posts to fetch some da
 Store the data in a state variable and display the title of the first post.
 */
 
+// const App = () => {
+//   return (
+//     <div>
+//     <FetchDataEffect />
+//   </div>
+//   )
+// }
+// export default App;
+
+
+// -------------->>> PROP DRILLING <<------------------\\
+
 const App = () => {
-  return (
-    <div>
-    <FetchDataEffect />
-  </div>
-  )
+
+  const name = "AMiT Kumar";
+
+  return <div>
+
+    <ComponentA name = {name} />
+
+
+  </div>;
 }
 
 export default App;
