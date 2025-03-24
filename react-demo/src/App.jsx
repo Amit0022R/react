@@ -292,22 +292,48 @@ Store the data in a state variable and display the title of the first post.
 
 // -------------->>> PROP DRILLING <<------------------\\
 
+// const App = () => {
+
+//   const name = "AMiT Kumar";
+
+//   return <div>
+
+//     <ComponentA name = {name} />
+
+
+//   </div>;
+// }
+
+// export default App;
+
+
+// -------->>> CONTEXT API <<<------------\\
+
+import { createContext } from "react";
+// import ComponentA from "./components/ComponentA";
+
+// create instance of createContext
+export const Data1 = createContext();
+export const Data2 = createContext();
+// export so that we can use in other files
+
 const App = () => {
 
   const name = "AMiT Kumar";
+  const age = 22;
 
+  // provider means this going to allows us to provide our data to all the components
   return <div>
-
-    <ComponentA name = {name} />
-
+    <Data1.Provider value = {name}>
+        <Data2.Provider value = {age}>
+             <ComponentA />
+        </Data2.Provider>
+    </Data1.Provider>
 
   </div>;
 }
 
 export default App;
-
-
-
 
 
 

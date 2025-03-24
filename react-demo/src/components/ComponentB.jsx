@@ -1,10 +1,16 @@
 import React from 'react'
 import ComponentC from './ComponentC'
 
-const ComponentB = ({name}) => {
+// const ComponentB = ({name}) => { // ->> PROP DRILLING
+const ComponentB = () => { // ->> CONTEXT API
   return (
     <div>
-      <ComponentC name = {name} />
+        {/* prop drillig */}
+      {/* <ComponentC name = {name} /> */}
+      
+        {/* context api */} 
+      <ComponentC/>
+
     </div>
   )
 }
