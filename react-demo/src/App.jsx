@@ -2,15 +2,16 @@
 // import Header from "./components/Header";
 // import Main from "./components/Main";
 
-import BasicEffect from "./components/BasicEffect";
-import ComponentA from "./components/ComponentA";
-import CounterEffect from "./components/CounterEffect";
-import FetchDataEffect from "./components/FetchDataEffect";
-import Profile from "./components/Profile";
-import ShoppingList from "./components/ShoppingList";
-import TodoList from "./components/TodoList";
-import UserStatus from "./components/UserStatus";
-import Weather from "./components/Weather";
+// import BasicEffect from "./components/BasicEffect";
+// import ComponentA from "./components/ComponentA";
+// import CounterEffect from "./components/CounterEffect";
+// import FetchDataEffect from "./components/FetchDataEffect";
+// import Profile from "./components/Profile";
+// import ShoppingList from "./components/ShoppingList";
+// import TodoList from "./components/TodoList";
+// import UserProfile from "./components/UserProfile";
+// import UserStatus from "./components/UserStatus";
+// import Weather from "./components/Weather";
 
 
 // function App() {
@@ -309,35 +310,93 @@ Store the data in a state variable and display the title of the first post.
 
 // -------->>> CONTEXT API <<<------------\\
 
-import { createContext } from "react";
-// import ComponentA from "./components/ComponentA";
+// import { createContext } from "react";
+// // import ComponentA from "./components/ComponentA";
 
-// create instance of createContext
-export const Data1 = createContext();
-export const Data2 = createContext();
-// export so that we can use in other files
+// // create instance of createContext
+// export const Data1 = createContext();
+// export const Data2 = createContext();
+// // export so that we can use in other files
+
+// const App = () => {
+
+//   const name = "AMiT Kumar";
+//   const age = 22;
+
+//   // provider means this going to allows us to provide our data to all the components
+//   return <div>
+//     <Data1.Provider value = {name}>
+//         <Data2.Provider value = {age}>
+//              <ComponentA />
+//         </Data2.Provider>
+//     </Data1.Provider>
+
+//   </div>;
+// }
+
+// export default App;
+
+// ->>>>>>>>>>>>>> USE CONTEXT  <<<<<<<<<<<<<<<<<<<-
+
+
+// import { createContext } from "react";
+// // import ComponentA from "./components/ComponentA";
+
+// // create instance of createContext
+// export const Data1 = createContext();
+// export const Data2 = createContext();
+// // export so that we can use in other files
+
+// const App = () => {
+
+//   const name = "Amit Kumar";
+//   const age = 22;
+
+//   // provider means this going to allows us to provide our data to all the components
+//   return <div>
+//     <Data1.Provider value = {name}>
+//         <Data2.Provider value = {age}>
+//              <ComponentA />
+//         </Data2.Provider>
+//     </Data1.Provider>
+
+//   </div>;
+// }
+
+// export default App;
+
+
+/*
+
+In this exercise, you will learn how to:
+
+Create a Context
+Use useContext to access data from the Context
+Share state and functions between components without using props
+Step 1: Creating a Context
+Create a new file called UserContext.js.
+Inside this file, create a UserContext and a UserProvider component that will hold the shared state.
+Step 2: Using useContext in Components
+Create a new file called UserProfile.jsx.
+Inside this file, create a functional component called UserProfile. This component will access the user data from UserContext using the useContext hook.
+Step 3: Updating Context Data
+Create a new file called UpdateUser.jsx.
+Inside this file, create a functional component called UpdateUser that allows the user to update their name.
+
+*/
+// import UserProfile from "./components/UserProfile";
+import {UserProvider} from "./components/UserContext";
+import UserProfile from "./components/UserProfile";
+import UpdateUser from "./components/UpdateUser";
 
 const App = () => {
-
-  const name = "AMiT Kumar";
-  const age = 22;
-
-  // provider means this going to allows us to provide our data to all the components
-  return <div>
-    <Data1.Provider value = {name}>
-        <Data2.Provider value = {age}>
-             <ComponentA />
-        </Data2.Provider>
-    </Data1.Provider>
-
-  </div>;
-}
+  return <UserProvider>
+    <UserProfile />
+    <UpdateUser />
+  </UserProvider>
+};
 
 export default App;
-
-
-
-
 
 
 
